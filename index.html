@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Sketch Classification</title>
+  <title>Sketch Identification</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -19,49 +19,38 @@
 </head>
 
 <body>
-  <center>
-<!-- Modal -->
-<div id="myModal" class="modal fade">
-  <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal">&times;</button>
-      <h4 class="modal-title">Sketches</h4>
-    </div>
 
-    <div class="modal-body">
-      <img src="sketch1.png">
-      <img src="sketch2.png">
-    </div>
+<center>
 
+<h1 id="header">Sketch Identification <button data-toggle="modal" data-target="#show" class="btn btn-info" id="Show_sketch">Show Sketch</button></h1>
+<br>
+
+<div class="modal fade" id="show">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button data-dismiss="modal" class="close">&times;</button> 
+        <h3>Sketches</h3>
+      </div>
+      <div class="modal-body">
+
+<img class="img-responsive" src="sketch1.png">
+<br>
+<br>
+<img class="img-responsive" src="sketch2.png">
+      </div>
+    </div>
   </div>
 </div>
 
-<div id="header">
-
-<h1>Quick Draw
-<button id="show_sketch" class="btn btn-info" data-toggle="modal" data-target="#myModal">Show Sketch</button>
-  </h1>
-  </div>
-
-  
-<h3>Your Sketch : <span id="label_span"></span> </h3>
-
+<h3>Label : <span id="label_span"></span> </h3>
+<br>
 <h3>Confidence : <span id="confidence_span"></span></h3>
 
-
-<span id="sketch_heading"> Sketch to be Drawn : </span>
 <br>
+<button class="btn btn-danger" onclick="clear_canvas()">Clear Canvas</button>
 
-<span id="score">Score : </span> <span id="timer"> Timer : </span> 
-<br>
-
-
-</center> 
-
-
-
+</center>
 
 <script src="main.js"></script>
 </body>
-
-</html>
